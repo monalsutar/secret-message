@@ -3,9 +3,27 @@
 <head>
   <title>Secret Message</title>
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      margin-left: 25%;
+    }
+    
+  </style>
 </head>
 <body>
-  <h2>🎊 Secret Message 🎊</h2>
-  <p style="font-size: 20px; color: #ff1493;"><strong><%= message %></strong></p>
+  <div class="sec-msg">
+
+    <h1>🎊 Secret Message 🎊</h1>
+    <p style="font-size: 20px; color: #ff1493;"><strong><%= message %></strong></p>
+  </div>
 </body>
 </html>

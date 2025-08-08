@@ -50,7 +50,6 @@
             height: 45px;
             width: 150px;
             font-size: large;
-            
         }
     </style>
 </head>
@@ -59,8 +58,8 @@
     <div class="container">
         <h1>Enter Secret Message 🔐 Details</h1>
         <form action="/generate" method="POST" class="form">
-            <input type="text" name="from" placeholder="From (Your Name)" required class="input-field"><br>
-            <input type="text" name="to" placeholder="To (Receiver's Name)" required class="input-field"><br>
+            <input type="text" name="from" placeholder="To (Receiver's Name)" required class="input-field"><br>
+            <input type="text" name="to" placeholder="Create Passkey for Message" required class="input-field"><br>
             <textarea name="message" placeholder="Secret Message" required class="input-field"></textarea><br>
             <button type="submit">Generate QR</button>
         </form>
