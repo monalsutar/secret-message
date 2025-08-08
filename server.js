@@ -29,7 +29,7 @@ app.post('/generate', async (req, res) => {
 
   messages[id] = { to, from, message };
 
-  const qrLink = `http://localhost:${PORT}/reveal?id=${id}`;
+  const qrLink = `https://secret-rakhi-qr.onrender.com/reveal?id=123456`;
   const qrImage = await QRCode.toDataURL(qrLink);
   res.render('qr', { qrImage });
 });
