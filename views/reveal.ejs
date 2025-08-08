@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reveal Secret</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h2>Enter Names to Reveal the Message</h2>
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+  <form action="/reveal" method="POST">
+    <input type="hidden" name="id" value="<%= id %>">
+    <input type="text" name="from" placeholder="From (Sender's Name)" required><br>
+    <input type="text" name="to" placeholder="To (Your Name)" required><br>
+    <button type="submit">Reveal</button>
+  </form>
+</body>
+</html>

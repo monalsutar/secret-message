@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Secret QR</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            height: 90vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+            overflow-x: hidden;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            
+            border-radius: 5%;
+        }
+        .input-field{
+            width: 380px;
+            height: 30px;
+            border: none;
+            font-weight: 600;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            padding: 1%;
+            font-size: large;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            background-color: green;
+            line-height: 30px;
+            color: lemonchiffon;
+            border: none;
+            border-radius: 5px;
+            height: 45px;
+            width: 150px;
+            font-size: large;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enter Secret Message 🔐 Details</h1>
+        <form action="/generate" method="POST" class="form">
+            <input type="text" name="from" placeholder="From (Your Name)" required class="input-field"><br>
+            <input type="text" name="to" placeholder="To (Receiver's Name)" required class="input-field"><br>
+            <textarea name="message" placeholder="Secret Message" required class="input-field"></textarea><br>
+            <button type="submit">Generate QR</button>
+        </form>
+    </div>
+</body>
+
+</html>
